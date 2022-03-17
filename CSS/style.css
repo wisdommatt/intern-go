@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.logoHeader{
+   padding:10px 0 10px 40px;
+    color: steelblue;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.containerSignup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    color: #000;
+}
+.internGoSignup{
+   background-color: #fff;
+   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 30%;
+}
+
+.internGoSignup h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.internGoSignup a{
+    text-decoration: none;
+    color:steelblue;
+    font-size: 14px;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0 20px;
+    width: 100%;
+}
+
+.form-control  input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: block;
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 14px;
+    color: #000;
+
+}
+
+.form-control  input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: steelblue;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    background-color: steelblue;
+    width: 100%;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+}
+ .btn:focus{
+     outline: 0;
+ }
+ .btn:active{
+     transform: scale(0.98);
+ }
+ .text{
+     margin-top: 30px;
+ }
+
+ .form-control label{
+     position: absolute;
+     top: 15px;
+     left:0;
+ }
+ .form-control label span{
+     display: inline-block;
+     font-size: 14px;
+     min-width: 5px;
+     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+       
+ }
+.form-control  input:focus + label span,
+.form-control  input:valid + label span{
+    color: steelblue;
+    transform: translateY(-30px);
+}
+
+/*Home page styling starts here*/
+.homepageBody{
+    background-color: #fff;
+}
+
+.navhomepage{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 300px;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+
+}
+.homepageLogo{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: steelblue;
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.homepageheadersearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.homepageInputdiv{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+   visibility: visible;
+}
+.homepageInputdiv img{
+    width: 30px;
+    height: 30px;
+    
+}
+.homepageInput{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+.homepageInput:focus{
+    outline: none;
+}
+.homepageInputEmployer{
+    margin-left: 10px;
+   font-size: 16px;
+   color: gray;
+}
+#vertical-line{
+    font-size: 20px; 
+}
+
+
+.homepageInputEmployer > p > a{
+    text-decoration: none;
+    color: gray
+}
+.homepagebody{
+   
+    width: 100%;
+    height: 500px;
+    background:url(../images/coverpage\ \(1\).jpg) 
+}
+.homepagebody::before{
+    background-color: rgba(15, 25, 39, 0.85);;
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 500px;
+   
+}
+
+.homepagebodyDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    position: absolute;
+    margin-top: -450px;
+}
+.homepagebodymainHeaderh1{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 68px;
+    color: #fff;
+    margin: 0 15% 0 15%; 
+}
+.homepagebodymainHeaderP{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 27px; 
+    margin: 0 33% 0 33%; 
+   color: #fff;
+   text-align: center;
+}
+.homepageinputSearch{
+    width: 60%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 0 40px 0 40px;
+color: #000;
+border-radius: 10px;
+}
+.homepageinputSearch1{
+    line-height: 15px;
+}
+.homepageinputSearch1 > h1{
+    font-size: 18px;
+    font-weight: 700;
+}
+.homepageinputSearch1 > p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.homepagebodySecond{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0 50px 0; 
+}
+.headertext{
+    font-weight: 700;
+    font-size: 30px;
+}
+.homepagebodybenefits{
+    display: flex;
+    margin: 50px 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+.homepagebodybenefitsh4 {
+    font-weight: 500;
+    font-size: 16px;
+}
+.homepagebodybenefitsmain{
+width: 30%;
+margin-right: 15px;
+font-size: 13px;
+line-height: 17px;
+font-weight: 300;
+
+}
+.ReviewCardsMain{
+    background-color: #FBFCFD;
+    padding-bottom: 100px;
+}
+.homepageReview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.homepageReviewCards{
+    display: flex;
+    width: 90%;
+    margin: 0 60px;
+}
+.homepageReviewCard {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
+    margin: 0 20px 0 0;
+}
+.homepageReviewCard3 {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
+    margin: 0 0 0 0;
+}
+.homepageReviewCardtext{
+    font-size: 13px;
+    line-height: 26px;
+    font-weight: 300;
+    margin: 0 20px;
+}
+
+.homepageReviewCardprofile {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 1fr;
+    margin: 0 20px;
+}
+.homepageReviewCardimage1{
+height: 56px;
+width: 56px;
+border-radius: 50%;
+margin-top: 20px;
+}
+.onE{
+    background: url(../images/Peace.jpg);
+    background-size: cover;
+}
+.tWo{
+    background: url(../images/Esu.jpg);
+    background-size: cover;
+}
+.tHree {
+    background: url(../images/clinthon.jpg);
+    background-size: cover;
+}
+.homepagecolon{
+    margin-top: 40px;
+}
+.homepageReviewCardname{
+    margin-top: 10px; 
+}
+.homepageReviewCardname > h4{
+    font-weight: 700;
+    font-size: 13px; 
+}
+.homepageReviewCardname > p{
+    margin-top: -15px;
+    font-weight: 250;
+    font-size: 13px; 
+}
+.homepagePortfolio{
+    display: flex;
+    justify-content: space-between;
+   padding: 50px 0;
+    height: 400px;
+    width: 90%;
+    margin: 0 20px;
+    
+}
+.homepagePortfolioImage{
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+    margin: 0 30px 0 80px;
+}
+.portfolioheadertext{
+    font-size: 30px;
+    font-weight: 700;
+}
+.portfolioheaderP{
+    font-size: 13px;
+    font-weight: 300;
+    margin: 10px 0;
+    color: rgba(0, 0, 51, 0.95);
+}
+.portfoliotextlist{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin: 50px 0 0 0;
+}
+.homepagePortfolioText{
+    margin: 0 80px 0 60px;
+}
+.portfolionumber{
+    width: 23px;
+    height: 46px;
+    color: #fff;
+    background-color: #1B5FC7;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.portfoliolisttexthead{
+    font-size: 18px;
+    font-weight: 700;
+}
+.portfoliolisttextP{
+font-size: 13px;
+font-weight: 300;
+color: rgba(0, 0, 51, 0.95);
+padding-bottom: 50px;
+line-height: 20px;
+}
+.homepageFooter{
+   background-color: #0A142F; 
+   height: 250px;
+   width: 100%;
+   margin-top: 250px;
+   display: flex;
+   justify-content: space-between;
+   color: #fff;
+   font-size: 13px;
+   font-weight: 400;
+   padding-top: 10px;
+ 
+}
+.homepageFooterLogo{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: steelblue;
+}
+.homepageFooter > div{
+    width: 20%;
+    margin: 0 10px;
+}
+@media only screen and (max-width:720px) {
+  
+    body{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .logoHeader{
+        padding:0;
+        margin: 0 0 40px 0;
+     }
+  
+   
+    .internGoSignup{
+       background-color: #fff;
+       box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px 40px;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 90%;
+    }
+  /* The Code for Homepage starts here*/
+.navhomepage{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0px;
+}
+
+
+.homepageInputdiv{
+    display: none;
+}
+.homepagebodymainHeaderh1{
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 10% 0 10%;    
+}
+.homepagebodymainHeaderP{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px; 
+    margin: 0 10% 0 10%; 
+
+}
+.homepagebody{
+    height: 400px;
+}
+.homepagebody::before{
+    height: 400px;  
+}
+.homepagebodyDiv{
+    margin-top: -350px;
+}
+.homepageinputSearch{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    font-size: 13px;
+    padding: 20px;
+}
+.imageforsearch{
+    display: none;
+}
+.homepageinputSearch1{
+margin: 0 10px;
+}
+.headertext{
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.homepagebodySecond{
+    margin: 50px 0;
+}
+
+.homepagebodybenefits{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+.homepagebodybenefitsh4 {
+    font-weight: 500;
+    font-size: 14px;
+}
+.homepagebodybenefitsmain{
+width: 80%;
+margin: 20px 0;
+font-size: 12px;
+}
+.ReviewCardsMain{
+    background-color: #FBFCFD;
+    padding: 0 0 100px 0;
+    margin: 0;
+}
+.homepageReview{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+.homepageReviewCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.homepageReviewCard {
+width: 90%;
+margin: 20px 0;
+font-size: 12px;  
+}
+.homepageReviewCard3{
+    width: 90%;
+    margin: 20px 0;
+    font-size: 12px; 
+}
+
+.homepageReviewCardtext{
+    font-size: 12px;
+    margin: 0 20px;
+}
+
+.homepagePortfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   padding:  0;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    
+}
+.homepagePortfolioImage{
+    width: 80%;
+    height: 300px;
+    background-size: cover;
+    margin: 0;
+}
+.homepagePortfolioImagetab{
+    width: 100%;
+    height: 500px;
+}
+.portfolioheadertext{
+    font-size: 24px;
+}
+.portfolioheaderP{
+    font-size: 12px;
+}
+.portfoliotextlist{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin: 50px 0 0 0;
+}
+.homepagePortfolioText{
+    margin: 250px 0 0 0;
+    width: 80%;
+}
+.portfolionumber{
+    width: 14px;
+    height: 23px;
+    color: #fff;
+    font-size: 12px;
+}
+.portfoliolisttexthead{
+    font-size: 14px;
+    font-weight: 700;
+}
+.portfoliolisttextP{
+font-size: 12px;
+
+}
+.homepageFooter{ 
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 10px;
+  
+ }
+ .homepageFooterLogo{
+     font-weight: 600;
+     font-size: 1.5em;
+     color: steelblue;
+ }
+ .homepageFooter > div{
+     width: 90%;
+     margin: 0;
+ }
+
+
+
+}
+
