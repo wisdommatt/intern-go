@@ -418,6 +418,161 @@ line-height: 20px;
     width: 20%;
     margin: 0 10px;
 }
+/*Styling For Jobs page begins here*/
+.jobpagebodymainHeaderh1{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 68px;  
+    color: #fff;
+    text-align: center;
+    margin: 0 15% ;
+}
+.jobpageinputSearch{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.jobpagesearch{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.jobpagesearch img {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+   
+}
+.jobpagesearch input, .jobpageinputSearch1 select{
+    border:none;
+    background-color: transparent;
+}
+.jobpagesearch input:focus, .jobpageinputSearch1 select{
+    outline: 0;
+}.joblistingmaindiv{
+    background-color: #fff;
+    margin: 150px 0 0 0;
+}
+.jobpagelistingP{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 5%;
+}
+.jobpagelistings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.jobpageReviewCard{
+    background-color: #fff;
+    box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
+    border-radius: 10px;
+    margin:0 10px 10px 0;
+    width: 30%;
+}
+.jobpageReviewCardprofile {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 1fr;
+    margin: 0 20px;
+}
+.jobpageReviewCardimage1{
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    margin-top: 20px;
+    background: url(../images/logo.svg);
+    background-size: cover;
+    }
+    .jobpageReviewCardname{
+            margin: 10px 5px; 
+        }
+        .jobpageReviewCardname > h4{
+            font-weight: 700;
+            font-size: 13px; 
+        }
+        .jobpageReviewCardname > p{
+            margin-top: -15px;
+            font-weight: 250;
+            font-size: 13px; 
+        }
+        .jobposthr{
+            width: 80%;
+        }
+        .jobpageposticon{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-size: 12px;
+        }
+        .jobpageposticon > div{
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+        .jobpageposticon >div > img{
+           margin-right: 5px;
+        }
+        .jobpostAvailable{
+            color: #029837;
+        }
+        .jobpostbag{
+            height:15px;
+            width: 15px;  
+            margin-top: 10px;
+        }
+        /*Password Reset Page*/
+        .passwordReset{
+            margin: 20px 0 50px 0;
+        }
+         /*Password Reset Page confirmation*/
+        .emailimagereset{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-top: 20px;
+           
+           
+        }
+        .emailimagereset > div{
+              height: 83px;
+            width: 83px;
+            border-radius: 50%; 
+             background-color: rgba(27, 95, 199, 0.08);
+             display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .emailResetClass{
+          height: 50px;
+          width: 50px;
+        }
+        .emailimageparagraph{
+            text-align: center;
+            font-weight: 300;
+            color: rgba(109, 109, 109, 0.45);
+            
+        }
+        .passwordResetbutton{
+            display: inline-block;
+            background-color: steelblue;
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0 50px 0;
+
+        }
+        .passwordResetbutton > p{
+            font-weight: 16px;
+            color: #fff;
+        }
+
 @media only screen and (max-width:720px) {
   
     body{
@@ -436,6 +591,62 @@ line-height: 20px;
         border-radius: 5px;
         font-size: 14px;
         width: 90%;
+    }
+    /*Coding for Jobs page begins here*/
+    .jobpagebodymainHeaderh1{
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 10% 0 10%;    
+    }
+    .jobpagebodymainHeaderP{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 20px; 
+        margin: 0 10% 0 10%; 
+    
+    }
+    .homepagebody{
+        height: 400px;
+    }
+    .homepagebody::before{
+        height: 400px;  
+    }
+    .jobpageinputSearch{
+        width: 90%;
+    }
+    .jobpageinputSearch{
+        margin-top: 50px;
+        border-radius: 10px;
+        padding: 0 5px;
+        justify-content: center;
+    }
+    .jobpagesearch{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .jobpagesearch img {
+        height: 30px;
+        width: 30px;
+        margin-top: 5px;
+        margin-right: 0;
+       
+    }
+    .jobpageinputSearch1 >select{
+        width: 40%;
+    }
+    
+    .jobpagelistings{
+        flex-wrap: wrap;
+    }
+    .joblistingmaindiv{
+        margin: 50px 0;
+    }
+    .jobpageReviewCard{
+    
+        width: 80%;
+        margin: 0 0 10px 0;
     }
   /* The Code for Homepage starts here*/
 .navhomepage{
