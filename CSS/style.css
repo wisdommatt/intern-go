@@ -125,10 +125,17 @@ body{
 .homepageLogo{
     font-weight: 600;
     font-size: 1.5em;
-    color: steelblue;
     display: flex;
     margin: 10px 0;
     justify-content: center;
+}
+.homepagelogoauthentication{
+    display: flex;
+    justify-content: left;
+}
+.homepageLogo > a{
+    text-decoration: none;
+    color: steelblue;
 }
 
 .homepageheadersearch{
@@ -563,7 +570,6 @@ line-height: 20px;
             background-color: steelblue;
             width: 100%;
             padding: 15px;
-            border-radius: 5px;
             text-align: center;
             margin: 20px 0 50px 0;
 
@@ -572,18 +578,184 @@ line-height: 20px;
             font-weight: 16px;
             color: #fff;
         }
+        /*Post job page starts here*/
+        .homepagebodypost{
+            background-color: #1B5FC7;
+            width: 100%;
+            height: 500px;
+           
+        }
+        .homepagebodyPostParagraph{
+            display: flex;
+            color: #fff;
+            margin: 0 30% 0 30%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .homepagebodyPostParagraph > h3{
+            font-weight: 700;
+            font-size: 46px;
+            line-height: 68px;
+            margin-bottom: 0;
+        }
+        .homepagebodyPostParagraph > p{
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 20px;
+
+        }
+        .homepagepostjobpageform{
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .homepageformain{
+            background-color: #fff;
+            width: 60%;
+            height: 800px;
+            margin: 80px 0 100px 0;
+            border-radius: 10px;
+            box-shadow: 0px 2px 20px rgba(14, 31, 53, 0.12);
+        }
+        .postdiv{
+            display: block;
+            padding: 10px;
+        }
+        .postdivlast{
+            display: block;
+            width: 100%;
+        }
+        input[type=file]::file-selector-button{
+            background-color: transparent;
+            border: 1.5px dashed rgba(0, 0, 51, 0.1);
+            width: 100%;
+            height: 54px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .postdivlast >label {
+          
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .homepageformaincontainer{
+            padding: 40px;
+        }
+        .postdiv >label, input, textarea{
+            width: 100%;
+            
+
+        } 
+        .postdiv input{
+            height: 54px;
+        }
+        .postdiv >label {
+          
+            font-size: 18px;
+            font-weight: 600;
+
+        } 
+        .postdiv > input, textarea{
+            border-radius: 8px;
+            border: 1.5px solid rgba(0, 0, 51, 0.1);
+            margin: 10px 0 0 0;
+            
+        }
+        .jobpostfile{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .postdiv > input:focus{
+           outline: 1.5px solid rgba(0, 0, 51, 0.1);
+
+        }
+        .postdiv > textarea:focus{
+            outline: 1.5px solid rgba(0, 0, 51, 0.1);
+ 
+         }
+         .postjobbutton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0 50px 0;
+         }
+         .postjobbutton > button {
+         background-color: steelblue;
+         width: 50%;
+         padding: 15px;
+         text-align: center;
+         border: 0;
+         color: #fff;
+         border-radius: 5px;
+         }
+.postjobbutton > button:active {
+          transform: scale(0.98);
+         }
 
 @media only screen and (max-width:720px) {
   
     body{
         background-color: rgba(0, 0, 0, 0.1);
     }
+
+    .homepagelogoauthentication{
+        display: flex;
+        justify-content: center;
+    }
     .logoHeader{
         padding:0;
         margin: 0 0 40px 0;
      }
-  
-   
+  /*post job here*/
+  .homepagebodyPostParagraph > h3{
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin: 30px 10% 0 10%;
+    
+  }
+  .homepagebodyPostParagraph > p{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 10% 0 10%;
+
+}
+.homepagebodyPostParagraph {
+    margin: 0 ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .homepagebodypost{
+        height: 350px;
+    }
+    .homepageformain{
+        background-color: #fff;
+        width: 90%;
+        height: 770px;
+        margin: 80px 0 100px 0;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px rgba(14, 31, 53, 0.12);
+    }
+    .homepagepostjobpageform{
+        margin-bottom: 150px;
+    }
+    .postdiv >label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .postdivlast >label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    /*ends here*/
     .internGoSignup{
        background-color: #fff;
        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -653,6 +825,9 @@ line-height: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 0px;
+}
+.homepageInputEmployer{
+    font-size: 12px;
 }
 
 
