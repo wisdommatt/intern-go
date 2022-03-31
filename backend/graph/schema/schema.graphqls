@@ -2,27 +2,93 @@
 #
 # https://gqlgen.com/getting-started/
 
-type Todo {
-  id: ID!
-  text: String!
-  done: Boolean!
-  user: User!
+scalar Time
+
+directive @hasCategory(category: AccountCategory!) on FIELD_DEFINITION
+directive @isAuthenticated on FIELD_DEFINITION
+
+enum AccountCategory {
+  Student
+  Organization
 }
 
-type User {
-  id: ID!
+input NewStudent {
   name: String!
+  email: String!
+  password: String!
+  resumeUrl: String!
+  skills: [String!]!
+  bio: String!
 }
 
-type Query {
-  todos: [Todo!]!
+input NewOrganization {
+  name: String!
+  email: String!
+  password: String!
+  description: String!
 }
 
-input NewTodo {
-  text: String!
-  userId: String!
+type Student {
+  id: String!
+  name: String!
+  email: String!
+  password: String!
+  resumeUrl: String!
+  skills: [String!]!
+  bio: String!
+}
+
+type Organization {
+  id: String!
+  name: String!
+  email: String!
+  password: String!
+  description: String!
+}
+
+union Account = Student | Organization
+
+type AuthResponse {
+  authToken: String!
+  account: Account!
+}
+
+input NewJob {
+  role: String!
+  location: String!
+  companyName: String!
+  jobType: String!
+  skills: [String!]!
+  description: String!
+}
+
+type Job {
+  id: String!
+  role: String!
+  location: String!
+  companyName: String!
+  jobType: String!
+  skills: [String!]!
+  description: String!
+  endDate: Time!
+  timeAdded: String!
+}
+
+input Pagination {
+  afterId: String
+  """ default pagination limit is 100 """
+  limit: Int
 }
 
 type Mutation {
-  createTodo(input: NewTodo!): Todo!
+  createStudentAccount(input: NewStudent!): Boolean!
+  createOrganizationAccount(input: NewOrganization!): Boolean!
+  emailLogin(email: String!, password: String!): AuthResponse!
+  createJob(input: NewJob!): Job! @hasCategory(category: Organization)
+  applyForJob(job: String!): Boolean!
+}
+
+type Query {
+  getAvailableJobs(search: String, pagination: Pagination!): [Job!]!
+  getAccount: Account! @isAuthenticated 
 }
