@@ -10,6 +10,7 @@ import (
 	firebase "firebase.google.com/go"
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
+	"github.com/go-chi/chi"
 	"github.com/wisdommatt/intern-go/backend/graph"
 	"github.com/wisdommatt/intern-go/backend/graph/generated"
 	"github.com/wisdommatt/intern-go/backend/internal/accounts"
@@ -33,11 +34,13 @@ func main() {
 		AccountService: accountService,
 	}}))
 
-	http.Handle("/graphql/playground", playground.Handler("GraphQL playground", "/graphql/query"))
-	http.Handle("/graphql/query", srv)
+	router := chi.NewRouter()
+	router.Use(setCorsHeaderMiddleware())
+	router.Handle("/graphql/playground", playground.Handler("GraphQL playground", "/graphql/query"))
+	router.Handle("/graphql/query", srv)
 
 	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
 
 func mustSetupFirestoreClient() *firestore.Client {
@@ -52,4 +55,18 @@ func mustSetupFirestoreClient() *firestore.Client {
 		log.Fatalln(err)
 	}
 	return client
+}
+
+type middlewareFunc func(next http.Handler) http.Handler
+
+func setCorsHeaderMiddleware() middlewareFunc {
+	return func(next http.Handler) http.Handler {
+		return http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {
+			rw.Header().Set("Access-Control-Allow-Origin", "*")
+			rw.Header().Set("Access-Control-Allow-Credentials", "true")
+			rw.Header().Set("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,PATCH")
+			rw.Header().Set("Access-Control-Allow-Headers", "Authorization, Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers")
+			next.ServeHTTP(rw, r)
+		})
+	}
 }
