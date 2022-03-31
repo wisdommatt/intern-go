@@ -12,6 +12,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/wisdommatt/intern-go/backend/graph"
 	"github.com/wisdommatt/intern-go/backend/graph/generated"
+	"github.com/wisdommatt/intern-go/backend/internal/accounts"
 	"google.golang.org/api/option"
 )
 
@@ -26,7 +27,11 @@ func main() {
 	firestoreClient := mustSetupFirestoreClient()
 	defer firestoreClient.Close()
 
-	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
+	accountService := accounts.NewService(firestoreClient)
+
+	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{
+		AccountService: accountService,
+	}}))
 
 	http.Handle("/graphql/playground", playground.Handler("GraphQL playground", "/graphql/query"))
 	http.Handle("/graphql/query", srv)

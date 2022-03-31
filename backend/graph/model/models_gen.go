@@ -9,13 +9,21 @@ import (
 	"time"
 )
 
-type Account interface {
-	IsAccount()
+type Account struct {
+	ID          string      `json:"id"`
+	Name        string      `json:"name"`
+	Email       string      `json:"email"`
+	Password    string      `json:"password"`
+	ResumeURL   string      `json:"resumeUrl"`
+	Skills      []string    `json:"skills"`
+	Bio         string      `json:"bio"`
+	Description string      `json:"description"`
+	AccountType AccountType `json:"accountType"`
+	TimeAdded   time.Time   `json:"timeAdded"`
 }
 
 type AuthResponse struct {
-	AuthToken string  `json:"authToken"`
-	Account   Account `json:"account"`
+	Account *Account `json:"account"`
 }
 
 type Job struct {
@@ -26,8 +34,18 @@ type Job struct {
 	JobType     string    `json:"jobType"`
 	Skills      []string  `json:"skills"`
 	Description string    `json:"description"`
-	EndDate     time.Time `json:"endDate"`
-	TimeAdded   string    `json:"timeAdded"`
+	TimeAdded   time.Time `json:"timeAdded"`
+}
+
+type NewAccount struct {
+	Name        string      `json:"name"`
+	Email       string      `json:"email"`
+	Password    string      `json:"password"`
+	ResumeURL   string      `json:"resumeUrl"`
+	Skills      []string    `json:"skills"`
+	Bio         string      `json:"bio"`
+	AccountType AccountType `json:"accountType"`
+	Description string      `json:"description"`
 }
 
 type NewJob struct {
@@ -46,80 +64,43 @@ type NewOrganization struct {
 	Description string `json:"description"`
 }
 
-type NewStudent struct {
-	Name      string   `json:"name"`
-	Email     string   `json:"email"`
-	Password  string   `json:"password"`
-	ResumeURL string   `json:"resumeUrl"`
-	Skills    []string `json:"skills"`
-	Bio       string   `json:"bio"`
-}
-
-type Organization struct {
-	ID          string `json:"id"`
-	Name        string `json:"name"`
-	Email       string `json:"email"`
-	Password    string `json:"password"`
-	Description string `json:"description"`
-}
-
-func (Organization) IsAccount() {}
-
-type Pagination struct {
-	AfterID *string `json:"afterId"`
-	//  default pagination limit is 100
-	Limit *int `json:"limit"`
-}
-
-type Student struct {
-	ID        string   `json:"id"`
-	Name      string   `json:"name"`
-	Email     string   `json:"email"`
-	Password  string   `json:"password"`
-	ResumeURL string   `json:"resumeUrl"`
-	Skills    []string `json:"skills"`
-	Bio       string   `json:"bio"`
-}
-
-func (Student) IsAccount() {}
-
-type AccountCategory string
+type AccountType string
 
 const (
-	AccountCategoryStudent      AccountCategory = "Student"
-	AccountCategoryOrganization AccountCategory = "Organization"
+	AccountTypeStudent      AccountType = "Student"
+	AccountTypeOrganization AccountType = "Organization"
 )
 
-var AllAccountCategory = []AccountCategory{
-	AccountCategoryStudent,
-	AccountCategoryOrganization,
+var AllAccountType = []AccountType{
+	AccountTypeStudent,
+	AccountTypeOrganization,
 }
 
-func (e AccountCategory) IsValid() bool {
+func (e AccountType) IsValid() bool {
 	switch e {
-	case AccountCategoryStudent, AccountCategoryOrganization:
+	case AccountTypeStudent, AccountTypeOrganization:
 		return true
 	}
 	return false
 }
 
-func (e AccountCategory) String() string {
+func (e AccountType) String() string {
 	return string(e)
 }
 
-func (e *AccountCategory) UnmarshalGQL(v interface{}) error {
+func (e *AccountType) UnmarshalGQL(v interface{}) error {
 	str, ok := v.(string)
 	if !ok {
 		return fmt.Errorf("enums must be strings")
 	}
 
-	*e = AccountCategory(str)
+	*e = AccountType(str)
 	if !e.IsValid() {
-		return fmt.Errorf("%s is not a valid AccountCategory", str)
+		return fmt.Errorf("%s is not a valid AccountType", str)
 	}
 	return nil
 }
 
-func (e AccountCategory) MarshalGQL(w io.Writer) {
+func (e AccountType) MarshalGQL(w io.Writer) {
 	fmt.Fprint(w, strconv.Quote(e.String()))
 }

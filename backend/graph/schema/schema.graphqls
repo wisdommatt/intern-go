@@ -4,21 +4,20 @@
 
 scalar Time
 
-directive @hasCategory(category: AccountCategory!) on FIELD_DEFINITION
-directive @isAuthenticated on FIELD_DEFINITION
-
-enum AccountCategory {
+enum AccountType {
   Student
   Organization
 }
 
-input NewStudent {
+input NewAccount {
   name: String!
   email: String!
   password: String!
   resumeUrl: String!
   skills: [String!]!
   bio: String!
+  accountType: AccountType!
+  description: String!
 }
 
 input NewOrganization {
@@ -28,7 +27,7 @@ input NewOrganization {
   description: String!
 }
 
-type Student {
+type Account {
   id: String!
   name: String!
   email: String!
@@ -36,20 +35,12 @@ type Student {
   resumeUrl: String!
   skills: [String!]!
   bio: String!
-}
-
-type Organization {
-  id: String!
-  name: String!
-  email: String!
-  password: String!
   description: String!
+  accountType: AccountType!
+  timeAdded: Time!
 }
-
-union Account = Student | Organization
 
 type AuthResponse {
-  authToken: String!
   account: Account!
 }
 
@@ -70,25 +61,16 @@ type Job {
   jobType: String!
   skills: [String!]!
   description: String!
-  endDate: Time!
-  timeAdded: String!
-}
-
-input Pagination {
-  afterId: String
-  """ default pagination limit is 100 """
-  limit: Int
+  timeAdded: Time!
 }
 
 type Mutation {
-  createStudentAccount(input: NewStudent!): Boolean!
-  createOrganizationAccount(input: NewOrganization!): Boolean!
+  createAccount(input: NewAccount!): Boolean!
   emailLogin(email: String!, password: String!): AuthResponse!
-  createJob(input: NewJob!): Job! @hasCategory(category: Organization)
-  applyForJob(job: String!): Boolean!
+  createJob(input: NewJob!): Job!
 }
 
 type Query {
-  getAvailableJobs(search: String, pagination: Pagination!): [Job!]!
-  getAccount: Account! @isAuthenticated 
+  getAvailableJobs: [Job!]!
+  getAccount(accountId: String!): Account! 
 }
