@@ -32,7 +32,6 @@ func (s *Service) CreateAccount(ctx context.Context, account model.Account) (*mo
 	if err != nil {
 		return nil, fmt.Errorf("an error occured while hashing password")
 	}
-	log.Println("creating account: ", account)
 	account.Password = string(hashedPassword)
 	doc, _, err := s.collection.Add(ctx, account)
 	if err != nil {

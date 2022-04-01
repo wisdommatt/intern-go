@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: intern-go-frontend
+    image: php:fpm-alpine3.14
+    command: ["sh", "-c", "cd frontend && php -S 0.0.0.0:5555"]
+    ports:
+      - "5555:5555"
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+
+  backend:
+    container_name: intern-go-backend
+    image: golang:1.17-alpine
+    command: ["sh", "-c", "go mod download && go run server.go"]
+    ports:
+      - "8080:8080"
+    working_dir: /app
+    volumes:
+      - ./backend:/app
