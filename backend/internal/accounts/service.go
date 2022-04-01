@@ -32,6 +32,7 @@ func (s *Service) CreateAccount(ctx context.Context, account model.Account) (*mo
 	if err != nil {
 		return nil, fmt.Errorf("an error occured while hashing password")
 	}
+	log.Println("creating account: ", account)
 	account.Password = string(hashedPassword)
 	doc, _, err := s.collection.Add(ctx, account)
 	if err != nil {
@@ -43,7 +44,7 @@ func (s *Service) CreateAccount(ctx context.Context, account model.Account) (*mo
 }
 
 func (s *Service) EmailLogin(ctx context.Context, email, password string) (*model.Account, error) {
-	iter := s.collection.Where("email", "==", email).Documents(ctx)
+	iter := s.collection.Where("Email", "==", email).Documents(ctx)
 	doc, err := iter.Next()
 	if err != nil {
 		log.Println("error: ", err)
@@ -89,6 +90,7 @@ func (s *Service) GetJobs(ctx context.Context) ([]model.Job, error) {
 			log.Println("error: ", err)
 			return nil, errSomethingWentWrong
 		}
+		job.ID = doc.Ref.ID
 		jobs = append(jobs, job)
 	}
 	return jobs, nil
