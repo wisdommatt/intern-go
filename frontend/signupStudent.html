@@ -1,48 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=s, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>InternGo</title>
-</head>
-<body>
-    <div class="homepageLogo homepagelogoauthentication"> <a href="./home.html"> InternGO</a></div>
+  </head>
+  <body>
+    <div class="homepageLogo homepagelogoauthentication">
+      <a href="/"> InternGO</a>
+    </div>
     <div class="containerSignup">
-        
-        <div class="internGoSignup">
-            <form action="" method="get">
+      <div class="internGoSignup">
+        <h1>Student</h1>
+        <form onsubmit="signupStudent(getFormValues(this)); return false;">
+          <div class="form-control">
+            <input type="text" name="name" required />
+            <label for="Name">Username e.g Fullname</label>
+          </div>
+          <div class="form-control">
+            <input type="email" name="email" required />
+            <label for="Name">Enter Your School Email</label>
+          </div>
+          <div class="form-control">
+            <input name="password" type="password" required />
+            <label for="Name">Enter Password</label>
+          </div>
+          <div class="form-control">
+            <input name="bio" required />
+            <label for="Name">Bio</label>
+          </div>
+          <div class="form-control">
+            <input name="resumeUrl" required />
+            <label for="Name">Resume Url</label>
+          </div>
+          <button class="btn" type="submit">Sign up</button>
 
-        
-                <h1>Student </h1>
-                <form action="">
-                    <div class="form-control">
-                        <input type="text" required>
-                        <label for="Name">Username e.g Fullname</label>
-                    </div> 
-                    <div class="form-control">
-                        <input type="email" required>
-                        <label for="Name">Enter Your School Email</label>
-                    </div>
-                    <div class="form-control">
-                        <input type="text"type="password" required>
-                        <label for="Name">Enter Password</label>
-                    </div>
-                    <div class="form-control">
-                        <input type="text"type="password" required>
-                        <label for="Name">Confirm Password</label>
-                    </div>
-                    <button class="btn">Sign up</button>
-            
-                    <p class="text">Already have an account? <a href="./login.html"> Sign in.</a> Not a Student? Sign Up as an <a href="./signupCompany.html"> Employer</a></p>
-                    
-                </form>
-               
-           
-        </div>
+          <p class="text">
+            Already have an account? <a href="./login.html"> Sign in.</a> Not a
+            Student? Sign Up as an <a href="./signupCompany.html"> Employer</a>
+          </p>
+        </form>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    function signupStudent(formValues) {
+      makeGraphqlRequest(
+        {
+          query: `mutation {
+                createAccount(input: {
+                    name: "${formValues.name}"
+                    email: "${formValues.email}"
+                    password: "${formValues.password}"
+                    bio: "${formValues.bio}"
+                    skills: []
+                    resumeUrl: "${formValues.resumeUrl}"
+                    accountType: Student
+                    description: ""
+                })
+            }`,
+        },
+        {
+          success: function () {
+            Swal.fire("Success", "Account created successfully", "success");
+            setTimeout(function() {
+                window.location.href = "/login.html";
+            }, 1000);
+          },
+        }
+      );
+    }
+  </script>
 </html>

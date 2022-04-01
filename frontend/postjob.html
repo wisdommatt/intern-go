@@ -1,84 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>Post Job</title>
-</head>
-<body class="homepageBody">
+  </head>
+  <body class="homepageBody">
     <div class="container navhomepage">
-        <div class="logoHomepage">
-            <div class="homepageLogo"> <a href="./home.html"> InternGO</a></div>
+      <div class="logoHomepage">
+        <div class="homepageLogo"><a href="/"> InternGO</a></div>
+      </div>
+      <div class="homepageheadersearch">
+        <div class="homepageInputdiv">
+          <input
+            type="text"
+            class="homepageInput"
+            placeholder="Search Internships"
+          /><img src="./images/search.svg" alt="" />
         </div>
-        <div class="homepageheadersearch">
-            
-                <div class="homepageInputdiv"><input type="text" class="homepageInput" placeholder="Search Internships"><img src="./images/search.svg" alt=""></div>
-                <div  class="homepageInputEmployer"> <p><a href="./jobpage.html">View Jobs</a> &nbsp;  &nbsp;  <a href="./signupStudent.html">Sign up  </a> &nbsp;  &nbsp; <a href="./login.html"><span id="homepagenavlogin">Login</span></a> </p> </div>
-          
-          
+        <div class="homepageInputEmployer">
+          <p>
+            <a href="./jobpage.html">View Jobs</a> &nbsp; &nbsp;
+            <a href="./signupStudent.html">Sign up </a> &nbsp; &nbsp;
+            <a href="./login.html"><span id="homepagenavlogin">Login</span></a>
+          </p>
         </div>
+      </div>
     </div>
 
     <div class="homepagebodypost">
-       <div class="homepagebodyPostParagraph">
+      <div class="homepagebodyPostParagraph">
         <h3>Are You Hiring? Tell Us What You Need</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos recusandae itaque inventore nesciunt earum, eligendi laboriosam labore doloremque. Impedit consequatur vel saepe nisi? Minima ipsum quos delectus assumenda voluptate eum.</p>
-       </div>
-       
-       <div class="homepagepostjobpageform">
-           <div class="homepageformain">
-            <div class="homepageformaincontainer">      
-       <div class="postdiv"><label for="Role">What role are you hiring?</label>  
-        <input type="text" placeholder="e.g Computer Science Intern"> </div> 
+        <!-- <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          recusandae itaque inventore nesciunt earum, eligendi laboriosam labore
+          doloremque. Impedit consequatur vel saepe nisi? Minima ipsum quos
+          delectus assumenda voluptate eum.
+        </p> -->
+      </div>
 
-        <div class="postdiv"><label for="Role">What is your Company Name?</label>  
-            <input type="text" placeholder="e.g Lotary App"> </div>
+      <div class="homepagepostjobpageform">
+        <div class="homepageformain">
+          <form class="homepageformaincontainer" onsubmit="postJob(getFormValues(this)); return false;">
+            <div class="postdiv">
+              <label for="Role">What role are you hiring?</label>
+              <input type="text" name="role" placeholder="e.g Computer Science Intern" />
+            </div>
 
-            <div class="postdiv"><label for="Role">Required Skills</label>  
-                <input type="text" placeholder="e.g Skills"> </div>
+            <div class="postdiv">
+              <label for="Role">What is your Company Name?</label>
+              <input type="text" name="companyName" placeholder="e.g Lotary App" />
+            </div>
 
-                <div class="postdiv"><label for="Role">Tell us more about the Job description
-            </label>  
-                <textarea name="" id="" cols="30" rows="10"></textarea> </div> 
-                <div class="postdivlast"><label for="Role">Upload Project Image or Documentation</label>  
-                    <input type="file" name=" +Upload File" class="jobpostfile"> </div>
-                    
+            <div class="postdiv">
+              <label for="Role">Where is the company ?</label>
+              <input type="text" name="location" placeholder="e.g Port-Harcourt" />
+            </div>
 
-                  <div class="postjobbutton"><button class="postjobbuttonItem" >Upload Now</button></div>  
-       </div>
-    </div>
-    </div>
-    
+            <div class="postdiv">
+              <label for="Role">Required Skills</label>
+              <input type="text" name="skills" placeholder="e.g Python, JavaScript, Business" required />
+            </div>
 
-    <div class="homepageFooter">
-        <div>
-            <p class="homepageFooterLogo">internGO</p>
+            <div class="postdiv">
+                <label for="Role">Job Type</label>
+                <input type="text" name="jobType" placeholder="e.g Part-Time, Full-Time" required />
+              </div>
+
+            <div class="postdiv">
+              <label for="Role">Tell us more about the Job description </label>
+              <textarea name="description" id="" cols="30" rows="10" required></textarea>
+            </div>
+
+            <div class="postjobbutton"><button class="postjobbuttonItem" type="submit" >Upload Now</button></div>  
+          </form>
         </div>
-    <div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quo. Dolores libero fugiat exercitationem voluptate.</p> 
-      <div>
-           <p>(+234) 9039553797</p>
-        <p>internGo@gmail.com</p></div>
+      </div>
+
+      <div class="homepageFooter">
+        <div>
+          <p class="homepageFooterLogo">internGO</p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quo.
+            Dolores libero fugiat exercitationem voluptate.
+          </p>
+          <div>
+            <p>(+234) 9039553797</p>
+            <p>internGo@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <p>Home</p>
+          <p>About Us</p>
+          <p>Hire</p>
+          <p>Templates</p>
+          <p>Privacy & Policy</p>
+
+          <p>2022 internGO All Rights reserved</p>
+        </div>
+        <div>
+          <p>Facebook</p>
+          <p>Twitter</p>
+          <p>LinkedIn</p>
+          <p>Instagram</p>
+        </div>
+        <div>
+          <a href="#"> <img src="./images/upview.svg" alt="" /> </a>
+        </div>
+      </div>
     </div>
-    <div>
-        <p>Home</p>
-        <p>About Us</p>
-        <p>Hire</p>
-        <p>Templates</p>
-        <p>Privacy & Policy</p>
-    
-        <p>2022 internGO All Rights reserved</p>
-    </div>
-    <div>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>LinkedIn</p>
-        <p>Instagram</p>
-    </div>
-    <div><a href="#"> <img src="./images/upview.svg" alt=""> </a></div>
-    </div>
-    </div>
-    </body>
-    </html>
+  </body>
+
+  <script src="./script.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    function postJob(formValues) {
+        if (String(localStorage.getItem("accountId")) === "") {
+            Swal.fire("Error", "Login to proceed", "error");
+            return;
+        }
+        makeGraphqlRequest({
+            query: `mutation {
+                createJob(input: {
+                    role: "${formValues.role}"
+                    location: "${formValues.location}"
+                    companyName: "${formValues.companyName}"
+                    jobType: "${formValues.jobType}"
+                    skills: ${JSON.stringify(String(formValues.skills).split(","))}
+                    description: "${formValues.description}"
+                }) {
+                    id
+                    role
+                    skills
+                    description
+                    companyName
+                }
+            }`,
+        }, {
+            success: function() {
+                Swal.fire("Success", "Job posted successfully", "success");
+                setTimeout(function () {
+                    window.location.reload();
+                }, 1000);
+            },
+        });
+    }      
+  </script>
+</html>

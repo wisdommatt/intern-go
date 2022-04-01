@@ -1,462 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>InternGo</title>
-</head>
-<body class="homepageBody">
+  </head>
+  <body class="homepageBody">
     <div class="container navhomepage">
-        <div class="logoHomepage">
-            <div class="homepageLogo"> <a href="./home.html"> InternGO</a></div>
+      <div class="logoHomepage">
+        <div class="homepageLogo"><a href="/"> InternGO</a></div>
+      </div>
+      <div class="homepageheadersearch">
+        <div class="homepageInputdiv">
+          <input
+            type="text"
+            class="homepageInput"
+            placeholder="Search Internships"
+          /><img src="./images/search.svg" alt="" />
         </div>
-        <div class="homepageheadersearch">
-            
-                <div class="homepageInputdiv"><input type="text" class="homepageInput" placeholder="Search Internships"><img src="./images/search.svg" alt=""></div>
-                <div  class="homepageInputEmployer"> <p><a href="./postJob.html">Post Job</a>  &nbsp;  &nbsp; <a href="./signupStudent.html">Sign up  </a> &nbsp;  &nbsp; <a href="./login.html"><span id="homepagenavlogin">Login</span></a> </p> </div>
-
+        <div class="homepageInputEmployer">
+          <p>
+            <a href="./postjob.html">Post Job</a> &nbsp; &nbsp;
+            <a href="./signupStudent.html">Sign up </a> &nbsp; &nbsp;
+            <a href="./login.html"><span id="homepagenavlogin">Login</span></a>
+          </p>
         </div>
+      </div>
     </div>
 
     <div class="homepagebody">
-        <div class="homepagebodyDiv">
-      
-            <h1 class="jobpagebodymainHeaderh1">Explore InternGO Internship Opportunities</h1>
-            <p class="homepagebodymainHeaderP">
-                Search for available internships, stand a chance to advance your career.
+      <div class="homepagebodyDiv">
+        <h1 class="jobpagebodymainHeaderh1">
+          Explore InternGO Internship Opportunities
+        </h1>
+        <p class="homepagebodymainHeaderP">
+          Search for available internships, stand a chance to advance your
+          career.
+        </p>
+
+        <div class="jobpageinputSearch">
+          <div class="jobpagesearch">
+            <div><img src="./images/search.svg" alt="" /></div>
+            <div class="jobpageinputSearch1">
+              <input type="text" placeholder="Search Jobs by keyword" />
+            </div>
+          </div>
+          <div class="jobpageinputSearch1">
+            <select name="All Jobs" id="">
+              <option value="one">Engineering</option>
+              <option value="one">Science</option>
+              <option value="one">Law</option>
+              <option value="one">Management Science</option>
+              <option value="one">Humanities</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="joblistingmaindiv">
+      <div><p class="jobpagelistingP" id="jobsContainer">All Jobs Results</p></div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <!-- <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p> -->
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
             </p>
-
-            <div class="jobpageinputSearch">
-                <div class="jobpagesearch">
-              <div><img src="./images/search.svg" alt=""></div>  <div class="jobpageinputSearch1"><input type="text" placeholder="Search Jobs by keyword"></div></div>
-                <div class="jobpageinputSearch1"><select name="All Jobs" id="">
-                    <option value="one">Engineering</option>
-                    <option value="one">Science</option>
-                    <option value="one">Law</option>
-                    <option value="one">Management Science</option>
-                    <option value="one">Humanities</option>
-                </select></div>
-                  
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
             </div>
-
-
-</div>
-</div>
-
-
-<div class="joblistingmaindiv">
-    <div> <p class="jobpagelistingP">All Jobs 1099 Results</p></div>
-    <div class="jobpagelistings">
-       
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-                <div class="jobpageReviewCard">
-                    <div class="jobpageReviewCardprofile">
-                        <div  class="jobpageReviewCardimage1"></div>
-                        <div class="jobpageReviewCardname">
-                            <h4>STARBUCKS</h4>
-                            <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                        </div>
-                     
-                    </div>
-                        <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                        <hr class="jobposthr">
-                        <div class="jobpageposticon">
-                            <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                            <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                            <div><img src="./images/progrssio.svg" alt=""> </div>
-                        </div>
-                    </div>
-                    <div class="jobpageReviewCard">
-                        <div class="jobpageReviewCardprofile">
-                            <div  class="jobpageReviewCardimage1"></div>
-                            <div class="jobpageReviewCardname">
-                                <h4>STARBUCKS</h4>
-                                <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                            </div>
-                         
-                        </div>
-                            <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                            <hr class="jobposthr">
-                            <div class="jobpageposticon">
-                                <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                                <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                                <div><img src="./images/progrssio.svg" alt=""> </div>
-                            </div>
-                        </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="jobpagelistings">
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+        <div class="jobpageReviewCard">
+          <div class="jobpageReviewCardprofile">
+            <div class="jobpageReviewCardimage1"></div>
+            <div class="jobpageReviewCardname">
+              <h4>STARBUCKS</h4>
+              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
+            </div>
+          </div>
+          <div class="homepageReviewCardtext">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
+              debitis nobis rerum asperiores omnis reprehenderit
+            </p>
+          </div>
+          <hr class="jobposthr" />
+          <div class="jobpageposticon">
+            <div>
+              <img src="./images/bag.png" alt="" class="jobpostbag" />
+              <p>Full Time</p>
+            </div>
+            <div class="jobpostAvailable">
+              <img src="./images/time.svg" alt="" />
+              <p>Available</p>
+            </div>
+            <div><img src="./images/progrssio.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="jobpagelistings">
-       
-        <div class="jobpageReviewCard">
-            <div class="jobpageReviewCardprofile">
-                <div  class="jobpageReviewCardimage1"></div>
-                <div class="jobpageReviewCardname">
-                    <h4>STARBUCKS</h4>
-                    <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                </div>
-             
-            </div>
-                <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                <hr class="jobposthr">
-                <div class="jobpageposticon">
-                    <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                    <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                    <div><img src="./images/progrssio.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-                <div class="jobpageReviewCard">
-                    <div class="jobpageReviewCardprofile">
-                        <div  class="jobpageReviewCardimage1"></div>
-                        <div class="jobpageReviewCardname">
-                            <h4>STARBUCKS</h4>
-                            <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                        </div>
-                     
-                    </div>
-                        <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                        <hr class="jobposthr">
-                        <div class="jobpageposticon">
-                            <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                            <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                            <div><img src="./images/progrssio.svg" alt=""> </div>
-                        </div>
-                    </div>
-</div>
-<div class="jobpagelistings">
-       
-    <div class="jobpageReviewCard">
-        <div class="jobpageReviewCardprofile">
-            <div  class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-                <h4>STARBUCKS</h4>
-                <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-            </div>
-         
-        </div>
-            <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-            <hr class="jobposthr">
-            <div class="jobpageposticon">
-                <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                <div><img src="./images/progrssio.svg" alt=""> </div>
-            </div>
-        </div>
-        <div class="jobpageReviewCard">
-            <div class="jobpageReviewCardprofile">
-                <div  class="jobpageReviewCardimage1"></div>
-                <div class="jobpageReviewCardname">
-                    <h4>STARBUCKS</h4>
-                    <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                </div>
-             
-            </div>
-                <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                <hr class="jobposthr">
-                <div class="jobpageposticon">
-                    <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                    <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                    <div><img src="./images/progrssio.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-</div>
-<div class="jobpagelistings">
-       
-    <div class="jobpageReviewCard">
-        <div class="jobpageReviewCardprofile">
-            <div  class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-                <h4>STARBUCKS</h4>
-                <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-            </div>
-         
-        </div>
-            <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-            <hr class="jobposthr">
-            <div class="jobpageposticon">
-                <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                <div><img src="./images/progrssio.svg" alt=""> </div>
-            </div>
-        </div>
-        <div class="jobpageReviewCard">
-            <div class="jobpageReviewCardprofile">
-                <div  class="jobpageReviewCardimage1"></div>
-                <div class="jobpageReviewCardname">
-                    <h4>STARBUCKS</h4>
-                    <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                </div>
-             
-            </div>
-                <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                <hr class="jobposthr">
-                <div class="jobpageposticon">
-                    <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                    <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                    <div><img src="./images/progrssio.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-</div>
-<div class="jobpagelistings">
-       
-    <div class="jobpageReviewCard">
-        <div class="jobpageReviewCardprofile">
-            <div  class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-                <h4>STARBUCKS</h4>
-                <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-            </div>
-         
-        </div>
-            <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-            <hr class="jobposthr">
-            <div class="jobpageposticon">
-                <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                <div><img src="./images/progrssio.svg" alt=""> </div>
-            </div>
-        </div>
-        <div class="jobpageReviewCard">
-            <div class="jobpageReviewCardprofile">
-                <div  class="jobpageReviewCardimage1"></div>
-                <div class="jobpageReviewCardname">
-                    <h4>STARBUCKS</h4>
-                    <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                </div>
-             
-            </div>
-                <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                <hr class="jobposthr">
-                <div class="jobpageposticon">
-                    <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                    <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                    <div><img src="./images/progrssio.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-</div>
-<div class="jobpagelistings">
-       
-    <div class="jobpageReviewCard">
-        <div class="jobpageReviewCardprofile">
-            <div  class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-                <h4>STARBUCKS</h4>
-                <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-            </div>
-         
-        </div>
-            <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-            <hr class="jobposthr">
-            <div class="jobpageposticon">
-                <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                <div><img src="./images/progrssio.svg" alt=""> </div>
-            </div>
-        </div>
-        <div class="jobpageReviewCard">
-            <div class="jobpageReviewCardprofile">
-                <div  class="jobpageReviewCardimage1"></div>
-                <div class="jobpageReviewCardname">
-                    <h4>STARBUCKS</h4>
-                    <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                </div>
-             
-            </div>
-                <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                <hr class="jobposthr">
-                <div class="jobpageposticon">
-                    <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                    <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                    <div><img src="./images/progrssio.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-</div>
-<div class="jobpagelistings">
-       
-    <div class="jobpageReviewCard">
-        <div class="jobpageReviewCardprofile">
-            <div  class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-                <h4>STARBUCKS</h4>
-                <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-            </div>
-         
-        </div>
-            <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-            <hr class="jobposthr">
-            <div class="jobpageposticon">
-                <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                <div><img src="./images/progrssio.svg" alt=""> </div>
-            </div>
-        </div>
-        <div class="jobpageReviewCard">
-            <div class="jobpageReviewCardprofile">
-                <div  class="jobpageReviewCardimage1"></div>
-                <div class="jobpageReviewCardname">
-                    <h4>STARBUCKS</h4>
-                    <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                </div>
-             
-            </div>
-                <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                <hr class="jobposthr">
-                <div class="jobpageposticon">
-                    <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                    <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                    <div><img src="./images/progrssio.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="jobpageReviewCard">
-                <div class="jobpageReviewCardprofile">
-                    <div  class="jobpageReviewCardimage1"></div>
-                    <div class="jobpageReviewCardname">
-                        <h4>STARBUCKS</h4>
-                        <p><img src="./images/locatio.svg" alt=""> Peter Odili Road</p>
-                    </div>
-                 
-                </div>
-                    <div  class="homepageReviewCardtext"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime ipsum nesciunt vero temporibus amet? Dolor doloremque debitis nobis rerum asperiores omnis reprehenderit</p></div>
-                    <hr class="jobposthr">
-                    <div class="jobpageposticon">
-                        <div> <img src="./images/bag.png" alt="" class="jobpostbag"><p>Full Time</p></div>
-                        <div class="jobpostAvailable"><img src="./images/time.svg" alt=""> <p>Available</p></div>
-                        <div><img src="./images/progrssio.svg" alt=""> </div>
-                    </div>
-                </div>
-</div>
-</div>
 
-
-
-
-<div class="homepageFooter">
-    <div>
+    <div class="homepageFooter">
+      <div>
         <p class="homepageFooterLogo">internGO</p>
-    </div>
-<div>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quo. Dolores libero fugiat exercitationem voluptate.</p> 
-  <div>
-       <p>(+234) 9039553797</p>
-    <p>internGo@gmail.com</p></div>
-</div>
-<div>
-    <p>Home</p>
-    <p>About Us</p>
-    <p>Hire</p>
-    <p>Templates</p>
-    <p>Privacy & Policy</p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quo.
+          Dolores libero fugiat exercitationem voluptate.
+        </p>
+        <div>
+          <p>(+234) 9039553797</p>
+          <p>internGo@gmail.com</p>
+        </div>
+      </div>
+      <div>
+        <p>Home</p>
+        <p>About Us</p>
+        <p>Hire</p>
+        <p>Templates</p>
+        <p>Privacy & Policy</p>
 
-    <p>2022 internGO All Rights reserved</p>
-</div>
-<div>
-    <p>Facebook</p>
-    <p>Twitter</p>
-    <p>LinkedIn</p>
-    <p>Instagram</p>
-</div>
-<div><a href="#"> <img src="./images/upview.svg" alt=""> </a></div>
-</div>
-</body>
+        <p>2022 internGO All Rights reserved</p>
+      </div>
+      <div>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>LinkedIn</p>
+        <p>Instagram</p>
+      </div>
+      <div>
+        <a href="#"> <img src="./images/upview.svg" alt="" /> </a>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    window.addEventListener("load", function() {
+      makeGraphqlRequest({
+        query: `query {
+          jobs: getAvailableJobs {
+            id
+            role
+            skills
+            description
+            location
+            jobType
+          }
+        }`,
+      }, {
+        success: function(data) {
+          for(var job of data.jobs) {
+            $("#jobsContainer").append(`
+              <div class="jobpageReviewCard">
+                <div class="jobpageReviewCardprofile">
+                  <div class="jobpageReviewCardimage1"></div>
+                  <div class="jobpageReviewCardname">
+                    <h4>${job.companyName}</h4>
+                    <p><img src="./images/locatio.svg" alt="" /> ${job.location}</p>
+                  </div>
+                </div>
+                <div class="homepageReviewCardtext">
+                  <p>
+                    ${job.description}
+                  </p>
+                </div>
+                <hr class="jobposthr" />
+                <div class="jobpageposticon">
+                  <div>
+                    <img src="./images/bag.png" alt="" class="jobpostbag" />
+                    <p>${job.jobType}</p>
+                  </div>
+                  <div class="jobpostAvailable">
+                    <img src="./images/time.svg" alt="" />
+                    <p>Available</p>
+                  </div>
+                  <div><img src="./images/progrssio.svg" alt="" /></div>
+                </div>
+              </div>
+            `);
+          }
+        },
+      });
+    });
+  </script>
 </html>
