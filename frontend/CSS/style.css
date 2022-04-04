@@ -472,7 +472,8 @@ line-height: 20px;
     margin: 10px 5%;
 }
 .jobpagelistings{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -482,7 +483,7 @@ line-height: 20px;
     box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
     border-radius: 10px;
     margin:0 10px 10px 0;
-    width: 30%;
+   
 }
 .jobpageReviewCardprofile {
     display: grid;
@@ -810,7 +811,8 @@ line-height: 20px;
     }
     
     .jobpagelistings{
-        flex-wrap: wrap;
+       display: block;
+
     }
     .joblistingmaindiv{
         margin: 50px 0;
