@@ -61,99 +61,9 @@
     </div>
 
     <div class="joblistingmaindiv">
-      <div><p class="jobpagelistingP" id="jobsContainer">All Jobs Results</p></div>
-      <div class="jobpagelistings">
-        <div class="jobpageReviewCard">
-          <div class="jobpageReviewCardprofile">
-            <div class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-              <h4>STARBUCKS</h4>
-              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
-            </div>
-          </div>
-          <div class="homepageReviewCardtext">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
-              debitis nobis rerum asperiores omnis reprehenderit
-            </p>
-          </div>
-          <hr class="jobposthr" />
-          <div class="jobpageposticon">
-            <div>
-              <img src="./images/bag.png" alt="" class="jobpostbag" />
-              <p>Full Time</p>
-            </div>
-            <div class="jobpostAvailable">
-              <img src="./images/time.svg" alt="" />
-              <p>Available</p>
-            </div>
-            <div><img src="./images/progrssio.svg" alt="" /></div>
-          </div>
-        </div>
-        <div class="jobpageReviewCard">
-          <div class="jobpageReviewCardprofile">
-            <div class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-              <h4>STARBUCKS</h4>
-              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
-            </div>
-          </div>
-          <div class="homepageReviewCardtext">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
-              debitis nobis rerum asperiores omnis reprehenderit
-            </p>
-          </div>
-          <hr class="jobposthr" />
-          <div class="jobpageposticon">
-            <div>
-              <img src="./images/bag.png" alt="" class="jobpostbag" />
-              <p>Full Time</p>
-            </div>
-            <div class="jobpostAvailable">
-              <img src="./images/time.svg" alt="" />
-              <p>Available</p>
-            </div>
-            <div><img src="./images/progrssio.svg" alt="" /></div>
-          </div>
-        </div>
-        <div class="jobpageReviewCard">
-          <div class="jobpageReviewCardprofile">
-            <div class="jobpageReviewCardimage1"></div>
-            <div class="jobpageReviewCardname">
-              <h4>STARBUCKS</h4>
-              <p><img src="./images/locatio.svg" alt="" /> Peter Odili Road</p>
-            </div>
-          </div>
-          <div class="homepageReviewCardtext">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              maxime ipsum nesciunt vero temporibus amet? Dolor doloremque
-              debitis nobis rerum asperiores omnis reprehenderit
-            </p>
-          </div>
-          <hr class="jobposthr" />
-          <div class="jobpageposticon">
-            <div>
-              <img src="./images/bag.png" alt="" class="jobpostbag" />
-              <p>Full Time</p>
-            </div>
-            <div class="jobpostAvailable">
-              <img src="./images/time.svg" alt="" />
-              <p>Available</p>
-            </div>
-            <div><img src="./images/progrssio.svg" alt="" /></div>
-          </div>
-        </div>
-         
-        </div>
+      <div><p class="jobpagelistingP">All Jobs Results</p></div>
+      <div class="jobpagelistings" id="jobsContainer"></div>
     </div>
-       
-     
-      
-      
 
     <div class="homepageFooter">
       <div>
@@ -200,11 +110,13 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
-    window.addEventListener("load", function() {
-      makeGraphqlRequest({
-        query: `query {
+    window.addEventListener("load", function () {
+      makeGraphqlRequest(
+        {
+          query: `query {
           jobs: getAvailableJobs {
             id
+            companyName
             role
             skills
             description
@@ -212,10 +124,11 @@
             jobType
           }
         }`,
-      }, {
-        success: function(data) {
-          for(var job of data.jobs) {
-            $("#jobsContainer").append(`
+        },
+        {
+          success: function (data) {
+            for (var job of data.jobs) {
+              $("#jobsContainer").append(`
               <div class="jobpageReviewCard">
                 <div class="jobpageReviewCardprofile">
                   <div class="jobpageReviewCardimage1"></div>
@@ -243,9 +156,10 @@
                 </div>
               </div>
             `);
-          }
-        },
-      });
+            }
+          },
+        }
+      );
     });
   </script>
 </html>

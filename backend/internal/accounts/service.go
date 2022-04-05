@@ -23,7 +23,8 @@ var (
 // NewService creates a new accounts service.
 func NewService(firestoreClient *firestore.Client) *Service {
 	return &Service{
-		collection: firestoreClient.Collection("accounts"),
+		collection:     firestoreClient.Collection("accounts"),
+		jobsCollection: firestoreClient.Collection("jobs"),
 	}
 }
 
@@ -65,7 +66,7 @@ func (s *Service) EmailLogin(ctx context.Context, email, password string) (*mode
 
 func (s *Service) CreateJob(ctx context.Context, job model.Job) (*model.Job, error) {
 	job.TimeAdded = time.Now()
-	doc, _, err := s.collection.Add(ctx, job)
+	doc, _, err := s.jobsCollection.Add(ctx, job)
 	if err != nil {
 		log.Println("error: ", err)
 		return nil, errSomethingWentWrong
@@ -75,7 +76,7 @@ func (s *Service) CreateJob(ctx context.Context, job model.Job) (*model.Job, err
 }
 
 func (s *Service) GetJobs(ctx context.Context) ([]model.Job, error) {
-	iter := s.collection.Documents(ctx)
+	iter := s.jobsCollection.Documents(ctx)
 	docs, err := iter.GetAll()
 	if err != nil {
 		log.Println("error: ", err)
